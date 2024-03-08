@@ -17,10 +17,16 @@ namespace FoxRabbits
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Game game { get; set; }
         public MainWindow()
         {
             InitializeComponent();
-            Game game = new Game(); 
+            game = new Game();
+        }
+
+        private void ButtonTurnON_Click(object sender, RoutedEventArgs e)
+        {
+            game.GameTurn();
         }
     }
 }

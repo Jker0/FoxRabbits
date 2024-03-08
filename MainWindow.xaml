@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Button x:Name="TurnOn" Content="Turn On" HorizontalAlignment="Left" Margin="693,380,0,0" VerticalAlignment="Top" Click="ButtonTurnON_Click"/>
 
     </Grid>
 </Window>

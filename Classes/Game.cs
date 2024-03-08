@@ -14,5 +14,10 @@ namespace FoxRabbits.Classes
         {
             TurnByStep = Conf._turnByStepConf;
         }   
+
+        public void GameTurn()
+        {
+
+        }
     }
 }
