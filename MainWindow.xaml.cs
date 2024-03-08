@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using FoxRabbits.Classes;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,7 @@ namespace FoxRabbits
         public MainWindow()
         {
             InitializeComponent();
+            Game game = new Game(); 
         }
     }
 }
