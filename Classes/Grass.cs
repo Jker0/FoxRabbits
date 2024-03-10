@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace FoxRabbits.Classes
 {
-    internal class Grass(int id)
+    internal class Grass
     {
-        private int Id { get; set; } = id;
 
     }
 }

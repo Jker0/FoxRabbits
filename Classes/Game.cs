@@ -1,41 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace FoxRabbits.Classes
 {
-    internal class Game
+    internal static class Game
     {
-        private int Turn { get; set; } = 0;
-        private int TurnByStep { get; set; } = Conf._turnByStepConf;
-        private List<Fox> Foxes { get; set; } = new List<Fox>(); 
-        private List<Rabbit> Rabbits { get; set; } = new List<Rabbit>();
-        private List<Grass> Grasses { get; set; } = [];
-        public Game() 
-        {
+        private static int Turn { get; set; } = 0;
+        private static int TurnByStep { get; set; } = Conf._turnByStepConf;
+        private static Creatures Creatures { get; set; }   
 
-        }   
-
-        public void GameTurn()
+        public static void GameTurn()
         {
             if (Turn == 0) 
             {
                 InitGame(); 
             }
+
+            for (int i = 0; i < TurnByStep; i++) 
+            {
+                Step();
+            }
         }
 
-        private void InitGame()
+        private static void InitGame()
         {
-            for (int i = 0; i < Conf._countGrassesConf; i++) 
-                Grasses.Add(new Grass(i));
+            Creatures = new Creatures();
+        }
 
-            for (int i = 0; i < Conf._rabbitsConf; i++)  
-                Rabbits.Add(new Rabbit(i));
+        private static void Step() 
+        {
 
-            for (int i = 0; i < Conf._foxConf; i++)
-                Foxes.Add(new Fox(i));  
         }
     }
 }
