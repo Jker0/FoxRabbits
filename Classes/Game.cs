@@ -6,7 +6,7 @@ namespace FoxRabbits.Classes
     {
         private static int Turn { get; set; } = 0;
         private static int TurnByStep { get; set; } = Conf._turnByStepConf;
-        private static Creatures Creatures { get; set; }   
+        private static Creatures Creatures { get; set; } = new Creatures();
 
         public static void GameTurn()
         {
@@ -23,7 +23,7 @@ namespace FoxRabbits.Classes
 
         private static void InitGame()
         {
-            Creatures = new Creatures();
+            
         }
 
         private static void Step() 

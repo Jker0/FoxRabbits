@@ -10,7 +10,7 @@ namespace FoxRabbits.Classes
         public Creatures() 
         {
             for (int i = 0; i < Conf._countGrassesConf; i++)
-                Grasses.Add(new Grass(i));
+                Grasses.Add(new Grass());
 
             for (int i = 0; i < Conf._rabbitsConf; i++)
                 Rabbits.Add(new Rabbit(i));
